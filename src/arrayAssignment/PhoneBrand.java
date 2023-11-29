@@ -26,8 +26,8 @@ public class PhoneBrand {
 		}
 		if (amongTheList) {
 			System.out.println("Selected Brand: " + phoneBrand);
-			System.out.println("Available products are: " + phones[i][1] + ", " + phones[i][2] + ", "
-					+ phones[i][3] + " and " + phones[i][4]);
+			System.out.println("Available products are: " + phones[i][1] + ", " + phones[i][2] + ", " + phones[i][3]
+					+ " and " + phones[i][4]);
 			System.out.println("********************************************************************************");
 			System.out.println("Enter a product name:");
 			String productName = sc.next();
@@ -44,12 +44,11 @@ public class PhoneBrand {
 			}
 			if (availability) {
 				System.out.println("Product selected is: " + productName);
-								
+
 			} else {
 				System.out.println("Please select a product from the list");
 			}
 
-			
 		} else {
 			System.out.println("Please select a Brand from the list");
 		}
