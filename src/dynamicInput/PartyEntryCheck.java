@@ -7,7 +7,7 @@ public class PartyEntryCheck {
 	
 	void allowInTheParty () {
 		
-		If (age>18|| isAccompaniedByAdult) {
+		if (age>18 || isAccompaniedByAdult) {
 			
 			System.out.println("Entrance granted");
 			

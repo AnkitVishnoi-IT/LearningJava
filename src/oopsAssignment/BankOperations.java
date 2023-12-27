@@ -9,6 +9,7 @@ public class BankOperations {
 			return balance;
 		} else {
 			balance -= amountWithdrawn;
+			System.out.println("New balance is: " + balance);
 			return balance;
 		}
 	}
@@ -16,6 +17,7 @@ public class BankOperations {
 	public double deposit(double amountDeposited, double balance) {
 
 		balance += amountDeposited;
+		System.out.println("New balance is: " + balance);
 		return balance;
 	}
 

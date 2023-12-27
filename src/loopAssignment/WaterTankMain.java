@@ -1,4 +1,4 @@
-package loopAssingment;
+package loopAssignment;
 
 import java.util.Scanner;
 
@@ -17,7 +17,7 @@ public class WaterTankMain {
 			startFilling.numOfbucketspoured = sc.nextInt();
 			startFilling.fillTank();
 
-			sc.close();
+			
 
 		}
 	}

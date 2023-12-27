@@ -7,7 +7,6 @@ public class MainClassMobile {
 		public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-			
 			//Object creation - Create a copy from the template
 			
 			// Syntax - ClassName objectName s new ClassName();

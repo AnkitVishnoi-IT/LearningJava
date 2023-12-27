@@ -1,4 +1,4 @@
-package loopAssingment;
+package loopAssignment;
 
 public class LoginMain {
 

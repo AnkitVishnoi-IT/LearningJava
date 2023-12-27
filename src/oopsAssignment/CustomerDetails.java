@@ -3,10 +3,10 @@ package oopsAssignment;
 public class CustomerDetails {
 
 	private String accountNum, customerName, userName, password;
-	private double balance;
+	private double initialDeposit, balance=initialDeposit;
 	private int pin;
 
-	public CustomerDetails(String customerName, String userName, String password, double balance, int pin) {
+	public CustomerDetails(String customerName, String userName, String password, double initialDeposit, int pin) {
 		super();
 		this.customerName = customerName;
 		this.userName = userName;
@@ -35,7 +35,19 @@ public class CustomerDetails {
 		this.pin = pin;
 	}
 
-	public double getBalance() {
+	public void setInitialDeposit(double initialDeposit) {
+		this.initialDeposit = initialDeposit;
+	}
+
+	
+	public double getBalance(double balance) {
+		return balance;
+	}
+	
+public double setBalance(double amountDeposited, double amountWithdrawn) {
+		
+	balance = initialDeposit + amountDeposited -amountWithdrawn;
+		
 		return balance;
 	}
 

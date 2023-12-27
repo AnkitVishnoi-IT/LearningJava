@@ -14,13 +14,13 @@ public class BankingMain {
 //		System.out.println("Enter Password:");
 //		String setPassword = sc.next();
 //		System.out.println("Enter the amount of first deposit:");
-//		double initialdeposit = sc.nextDouble();
+//		double initialDeposit = sc.nextDouble();
 //		System.out.println("Create your Pin:");
 //		int setPin = sc.nextInt();
+//
+//		CustomerDetails calculate = new CustomerDetails(setName, setUserName, setPassword, initialDeposit, setPin);
 
-//		CustomerDetails calculate = new CustomerDetails(setName, setUserName, setPassword, initialdeposit, setPin);
-
-		CustomerDetails calculate = new CustomerDetails("Mr.Beans", "Bean420", "BestCartoon", 5000, 1234);
+		CustomerDetails customer = new CustomerDetails("Mr.Beans", "Bean420", "BestCartoon", 5000, 1234);
 
 		ATM atm = new ATM();
 
@@ -43,7 +43,7 @@ public class BankingMain {
 			System.out.println("Please enter your pin: ");
 			int pinEntered = sc.nextInt();
 
-			if (calculate.validation(accountNumEntered, pinEntered) == true) {
+			if (customer.validation(accountNumEntered, pinEntered) == true) {
 
 				System.out.println("Please select Deposit or Withdrawl : ");
 				String action = sc.next().toUpperCase();
@@ -59,25 +59,26 @@ public class BankingMain {
 				case "DEPOSIT":
 					System.out.println("Please enter the deposit amount: ");
 					double amountDeposited = sc.nextDouble();
-					atm.deposit(amountDeposited, calculate.getBalance());
+					atm.deposit(amountDeposited, customer.getBalance(amountDeposited));
 					break;
 
 				default:
 					System.out.println("Please enter the withdrawl amount: ");
 					double amountWithdrawn = sc.nextDouble();
-					atm.deposit(amountWithdrawn, calculate.getBalance());
+					atm.withdrawl(amountWithdrawn, customer.getBalance(amountWithdrawn));
 					break;
+
 				}
-
 			}
+			break;
 
-		default:
+		case "ONLINEBANKING":
 			System.out.println("Please enter your username: ");
 			String userNameEntered = sc.next();
 			System.out.println("Please enter your password: ");
 			String passwordEntered = sc.next();
 
-			if (calculate.validation(userNameEntered, passwordEntered) == true) {
+			if (customer.validation(userNameEntered, passwordEntered) == true) {
 
 				System.out.println("Please select Deposit or Withdrawl : ");
 				String action = sc.next().toUpperCase();
@@ -93,13 +94,13 @@ public class BankingMain {
 				case "DEPOSIT":
 					System.out.println("Please enter the deposit amount: ");
 					double amountDeposited = sc.nextDouble();
-					onlineBanking.deposit(amountDeposited, calculate.getBalance());
+					onlineBanking.deposit(amountDeposited, customer.getBalance(amountDeposited));
 					break;
 
 				default:
 					System.out.println("Please enter the withdrawl amount: ");
 					double amountWithdrawn = sc.nextDouble();
-					onlineBanking.deposit(amountWithdrawn, calculate.getBalance());
+					onlineBanking.withdrawl(amountWithdrawn, customer.getBalance(amountWithdrawn));
 					break;
 				}
 

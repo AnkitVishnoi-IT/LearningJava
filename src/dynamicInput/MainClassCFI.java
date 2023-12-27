@@ -6,10 +6,10 @@ public class MainClassCFI {
 		// TODO Auto-generated method stub
 		
 		CalculateFuelInjection calculateFuelInjection = new CalculateFuelInjection ();
-		//Initialize the 
-		calculateFuelInjection.xThrottle = 128;
-		
-		calculateFuelInjection.calculateFuleInjection();
+		//initialize variables means assigning values to variables
+				calculateFuelInjection.xThrottle = 120;
+				//calculateFuelInjection.yfuel 
+				calculateFuelInjection.calculateFuelInjection();
 			
 
 	}

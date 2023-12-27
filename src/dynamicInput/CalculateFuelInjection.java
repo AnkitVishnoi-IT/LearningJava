@@ -4,10 +4,8 @@ public class CalculateFuelInjection {
 	
 	int xThrottle, yFuel;
 	
-	void calculateFuleInjection()	{
-		
-		boolean isXlessThan127 = xThrottle<=127;
-		
+	void calculateFuelInjection()	{
+			
 		if (xThrottle>=0 && xThrottle<=127) {			//if (condition) { code that will be executed when the result of condition is true}
 			
 			yFuel = xThrottle*2;
@@ -21,7 +19,7 @@ public class CalculateFuelInjection {
 			System.out.println("X-Throttle should be between 1 to 255");		
 		}
 		
-		//System.out.println("yFuel value is : " + yFuel);   //we need to shift it from here as it will still print 0 when x>256
+		//System.out.println("yFuel value is : " + yFuel);   //we need to shift syso from here inside the if conditions else it will still print 0 when x>256
 		
 	}
 
