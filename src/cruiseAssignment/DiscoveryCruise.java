@@ -22,4 +22,10 @@ public class DiscoveryCruise extends CruiseDetails {
 		return 9.99;
 
 	}
+
+	@Override
+	public String getSelectedCruise() {
+		return "Discovery Cruise";
+
+	}
 }
