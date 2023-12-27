@@ -2,7 +2,7 @@ package cruiseAssignment;
 
 import java.util.Scanner;
 
-public class CruiseMain {
+public class CruiseMainNew {
 
 	public static void main(String[] args) {
 
@@ -51,60 +51,6 @@ public class CruiseMain {
 
 		user.setTotalNumOfAdults();
 		user.setKidsAboveFive();
-//		while (true) {
-//			try {
-//				System.out.println("Enter the Number of Adults\n");
-//
-//				totalNumOfAdults = sc.nextInt();
-//				break;
-//			} catch (Exception e) {
-//				System.out.println("Invalid Input, Please Enter valid Number of Adults\n");
-//				sc.nextLine();
-//				continue;
-//			}
-//		}
-//
-//		while (true) {
-//			try {
-//				System.out.println("Enter the Number of Children\n");
-//
-//				totalKids = sc.nextInt();
-//				break;
-//			} catch (Exception e) {
-//				System.out.println("Invalid Input, Please Enter valid Number of Children\n");
-//				sc.nextLine();
-//				continue;
-//			}
-//		}
-//
-//		for (int i = 0; i <= totalKids; i++) {
-//
-//			if (i > 0) {
-//				while (true) {
-//					try {
-//						System.out.println("Enter the age of child" + i + "\n");
-//						ageOfKid = sc.nextInt();
-//						break;
-//					} catch (Exception e) {
-//						System.out.println("Invalid Input, Age can only be Numbers");
-//						sc.nextLine();
-//						continue;
-//					}
-//				}
-//				if (ageOfKid > 12) {
-//					System.out.println("Traveler is above kid's age limit and should be considered as Adult"
-//							+ "Type 'Add' to increase the number of adults.\n");
-//					addAdult = sc.nextLine();
-//
-//					totalNumOfAdults = addAdult.equalsIgnoreCase("Add") ? totalNumOfAdults + 1 : totalNumOfAdults;
-//				}
-//			}
-//
-//			if (ageOfKid <= 12 && ageOfKid >= 5) {
-//				kidsAboveFive++;
-//			}
-//
-//		}
 
 		cruise.setTotalAdutls(user.getTotalNumOfAdults());
 		cruise.setTotalKidsAboveFive(user.getKidsAboveFive());

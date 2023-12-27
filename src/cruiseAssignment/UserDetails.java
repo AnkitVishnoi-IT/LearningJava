@@ -6,8 +6,8 @@ public class UserDetails {
 
 	Scanner sc = new Scanner(System.in);
 
-	String userName, password, name, phNum, newInput;
-	int inputSelection;
+	String userName, password, name, phNum, newInput, addAdult;
+	int inputSelection, totalNumOfAdults, totalKids, ageOfKid, kidsAboveFive;
 
 	public UserDetails(String userName, String password, String name, String phNum) {
 		super();
@@ -47,6 +47,80 @@ public class UserDetails {
 
 	public void setPhNum(String phNum) {
 		this.phNum = phNum;
+	}
+
+	public int getTotalNumOfAdults() {
+
+		return totalNumOfAdults;
+
+	}
+
+	public void setTotalNumOfAdults() {
+
+		while (true) {
+			try {
+				System.out.println("Enter the Number of Adults\n");
+
+				this.totalNumOfAdults = sc.nextInt();
+				break;
+			} catch (Exception e) {
+				System.out.println("Invalid Input, Please Enter valid Number of Adults\n");
+				sc.nextLine();
+				continue;
+			}
+
+		}
+	}
+
+	public int getKidsAboveFive() {
+
+		return totalKids;
+
+	}
+
+	public int setKidsAboveFive() {
+		while (true) {
+			try {
+				System.out.println("Enter the Number of Children\n");
+
+				this.totalKids = sc.nextInt();
+				break;
+			} catch (Exception e) {
+				System.out.println("Invalid Input, Please Enter valid Number of Children\n");
+				sc.nextLine();
+				continue;
+			}
+		}
+
+		for (int i = 0; i <= totalKids; i++) {
+
+			if (i > 0) {
+				while (true) {
+					try {
+						System.out.println("Enter the age of child" + i + "\n");
+						ageOfKid = sc.nextInt();
+						break;
+					} catch (Exception e) {
+						System.out.println("Invalid Input, Age can only be Numbers");
+						sc.nextLine();
+						continue;
+					}
+				}
+				if (ageOfKid > 12) {
+					System.out.println("Traveler is above kid's age limit and should be considered as Adult"
+							+ "Type 'Add' to increase the number of adults.\n");
+					addAdult = sc.nextLine();
+
+					totalNumOfAdults = addAdult.equalsIgnoreCase("Add") ? totalNumOfAdults + 1 : totalNumOfAdults;
+				}
+			}
+
+			if (ageOfKid <= 12 && ageOfKid >= 5) {
+				kidsAboveFive++;
+			}
+
+		}
+		return kidsAboveFive;
 	}
 
 	public void changeDetails() {
