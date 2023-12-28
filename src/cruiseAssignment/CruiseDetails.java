@@ -146,7 +146,7 @@ public class CruiseDetails {
 			System.out.println("HST			@15%						:$" + tax);
 
 			System.out.println("Final Price								:$" + grandTotal);
-
+			break;
 		default:
 
 			System.out.println("Your Package includes:");
@@ -162,7 +162,7 @@ public class CruiseDetails {
 			System.out.println("HST			@15%						:$" + tax);
 
 			System.out.println("Final Price								:$" + grandTotal);
-
+			break;
 		}
 
 	}
