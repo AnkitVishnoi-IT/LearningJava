@@ -83,9 +83,6 @@ public class Simulation {
 	public static int runSimulation(ArrayList<Rocket> rockets) {
 		int totalBudget = 0;
 		for (Rocket rocket : rockets) {
-//			totalBudget += 100; // $100 million cost to build each rocket
-//			while (!rocket.launch() || !rocket.land()) {
-//				totalBudget += 100; // Retry cost if launch or land fails
 			do {
 				totalBudget += 100;
 			} while (rocket.launch() && rocket.land());
