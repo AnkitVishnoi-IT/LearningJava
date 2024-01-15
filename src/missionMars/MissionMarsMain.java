@@ -30,10 +30,10 @@ public class MissionMarsMain {
 					rockets = demo.loadU2(items);
 				}
 				int totalCost = demo.runSimulation(rockets);
-				System.out.println("Total budget required: $" + totalCost + " million");
+				System.out.println("Total cost for " + prototype.toUpperCase() + " fleet: $" + totalCost + " million");
 				break;
 			} else {
-				System.out.println("Invalid input. Please enter R1 or R2.");
+				System.out.println("Invalid input");
 			}
 		}
 
