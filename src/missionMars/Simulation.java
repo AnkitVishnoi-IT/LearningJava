@@ -81,13 +81,13 @@ public class Simulation {
 	}
 
 	public static int runSimulation(ArrayList<Rocket> rockets) {
-		int totalBudget = 0;
+		int totalCost = 0;
 		for (Rocket rocket : rockets) {
 			do {
-				totalBudget += 100;
+				totalCost += 100;
 			} while (rocket.launch() && rocket.land());
 		}
-		return totalBudget;
+		return totalCost;
 
 	}
 
