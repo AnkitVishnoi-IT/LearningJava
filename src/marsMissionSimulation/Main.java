@@ -16,13 +16,13 @@ public class Main {
 
 			double totalBudgetR1 = simulation.runSimulation(r1Fleet);
 
-			System.out.println("Total cost for R1 fleet: $" + totalBudgetR1 + " million");
+			System.out.printf("Total cost for R1 fleet: $%,d million%n", (int) totalBudgetR1);
 
 			ArrayList<Rocket> r2Fleet = simulation.loadU2(items);
 
 			double totalBudgetR2 = simulation.runSimulation(r2Fleet);
 
-			System.out.println("Total cost for R2 fleet: $" + totalBudgetR2 + " million");
+			System.out.printf("Total cost for R2 fleet: $%,d million%n", (int) totalBudgetR2);
 
 			displayLaunchLandStats(r1Fleet, "R1");
 			displayLaunchLandStats(r2Fleet, "R2");
