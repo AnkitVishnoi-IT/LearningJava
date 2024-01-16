@@ -15,7 +15,7 @@ public class MissionMarsMain {
 		Scanner sc = new Scanner(System.in);
 		String prototype;
 		Simulation demo = new Simulation();
-		String filename = "phase-1.txt"; // Replace with the actual filename
+		String filename = "phase-1.txt";
 		ArrayList<Item> items = demo.loadItems();
 		ArrayList<Rocket> rockets = null;
 

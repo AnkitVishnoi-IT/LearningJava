@@ -5,7 +5,7 @@ public class Rocket implements SpaceShip {
 	public int rocketCost;
 	public int rocketWeight;
 	public int maxWeight; // Max weight rocket can take (includes rocket Weight + item Weight) (in Kg)
-	public int totalWeight; // Weight of rocketwith items (in Kg)
+	public int totalWeight; // Weight of rocket with items (in Kg)
 	public int cargoCarried; // Weight of total items in the rocket (in Kg)
 	public int cargoLimit; // Weight Limit of total items that rocket can carry (in Kg)
 	public double explosionPercent; // Chance of launch explosion
@@ -55,16 +55,8 @@ public class Rocket implements SpaceShip {
 		return explosionPercent;
 	}
 
-	public void setExplosionPercent(double chanceOfLaunchExplosion) {
-		this.explosionPercent = explosionPercent;
-	}
-
 	public double getCrashPercent() {
 		return crashPercent;
-	}
-
-	public void setCrashPercent(double chanceOfLandingCrash) {
-		this.crashPercent = crashPercent;
 	}
 
 	@Override
@@ -93,8 +85,8 @@ public class Rocket implements SpaceShip {
 	@Override
 	public void carry(Item item) {
 		if (canCarry(item)) {
-			totalWeight = rocketWeight + item.getWeight(); // Total Weight that a rocket carries = rocketWeight +
-															// itemWeight
+			totalWeight = rocketWeight + item.getWeight(); // Total Weight that a rocket carries = rocketWeight + itemWeight
+															
 		}
 	}
 

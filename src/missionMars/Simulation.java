@@ -28,10 +28,11 @@ public class Simulation {
 
 		String x;
 		ArrayList<String> input = new ArrayList<String>();
-		ArrayList<Item> item = new ArrayList<>();
+		ArrayList<Item> items = new ArrayList<>();
 
 		while ((x = rd.readLine()) != null) {
 			input.add(x);
+			rd.close();
 
 		}
 		int j = input.size();
@@ -41,11 +42,10 @@ public class Simulation {
 			String a = input.get(i);
 			string = (a.split("="));
 //		System.out.println(Arrays.toString(string));
-			item.add(new Item(string[0], Integer.parseInt(string[1])));
+			items.add(new Item(string[0], Integer.parseInt(string[1])));
 		}
 
-		return item;
-
+		return items;
 	}
 
 	public static ArrayList<Rocket> loadU1(ArrayList<Item> items) {
