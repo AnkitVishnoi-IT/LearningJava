@@ -22,7 +22,6 @@ public class MinMaxInArrayList {
 				numbers.add(number);
 			} catch (NumberFormatException e) {
 				System.out.println("Invalid input. Please enter valid integers.");
-				// Handle invalid input if needed
 			}
 		}
 

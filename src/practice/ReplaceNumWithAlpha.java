@@ -36,7 +36,6 @@ public class ReplaceNumWithAlpha {
 
 			for (int i = 0; i < numbers.size(); i++) {
 				if (numbers.get(i) >= 1 && numbers.get(i) <= 26) {
-					// Replace with corresponding alphabet
 					int j = numbers.get(i) - 1;
 					resultArrayList.add(String.valueOf(alpha[j]));
 				} else {
